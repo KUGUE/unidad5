@@ -13,6 +13,14 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('home', function () {
+    return view('home');
+});
+
 Route::get('users/',[UserController::class,'index']);
 
 Route::get('users/create',[UserController::class,'create']);
